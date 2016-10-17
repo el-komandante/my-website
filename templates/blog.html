@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "template.html" %}
+{% set active_page = "blog" %}
+
+{% block content %}
+<!-- <div class='blog'> -->
+  <div class="posts">
+    <h1 class='blog-title'><b>Blog</b></h1>
+    <ul class="post-list">
+{% for post in posts %}
+    <a class="post" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+        <h2 class='blog-post'>{{ post.title }}</h2>
+    </a>
+    <small>{{ post.date }}</small>
+    <br>
+{% endfor %}
+    </ul>
+  </div>
+<!-- </div> -->
+{% endblock %}

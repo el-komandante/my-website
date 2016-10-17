@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% set navigation_bar = [
+('/resume/', 'resume', 'Resume'),
+('/projects/', 'projects', 'Projects'),
+('/blog/', 'blog', 'Blog')
+] -%}
+{% set active_page = active_page|default('index') -%}
+<html lang="en">
+  <head>
+    <title>Charles DeBerry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/animate.min.css">
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class-"navbar-header">
+          <a class="navbar-brand" href="/">Charles DeBerry</a>
+        </div>
+          <ul class="nav navbar-nav list-hover-slide" id="navlist">
+            {% for href, id, caption in navigation_bar %}
+          <li{% if id == active_page %} class="active"{% endif
+          %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
+    <div class="bg"></div>
+    <div class='container'>
+      {% block content %}
+      {% endblock %}
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- <script src="/static/js/jquery.smoothState.min.js"></script>
+    <script src="/static/js/function.js"></script> -->
+  </body>
+</html>

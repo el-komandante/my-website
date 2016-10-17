@@ -1,0 +1,17 @@
+#notebook-container {
+  padding: 0;
+  width: 100%;
+  margin: none;
+  box-shadow: none;
+  left: 0;
+}
+iframe {
+  border: none;
+  left: 0;
+}
+body {
+  padding: 0;
+}
+div.cell {
+  padding: 0;
+}

@@ -1,0 +1,6 @@
+*.pyc
+*.exe
+*.docx
+virtual/
+.elasticbeanstalk/
+.ebextensions/
