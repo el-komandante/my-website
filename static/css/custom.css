@@ -1,3 +1,53 @@
+/* csslint ignore:important */
+@media (max-width: 700px) {
+	.container {
+		/*padding-top: 20% !important;*/
+		margin-top: 10% !important;
+	}
+}
+@media (max-width: 979px) {
+	h1 {
+		font-size: 1.8em;
+	}
+	h3 {
+		font-size: 1.4em;
+	}
+  .container {
+    padding-top: 10%;
+		margin: 0 auto;
+  }
+	.details {
+		padding-left: 4%;
+	}
+	.icon-bar {
+		background-color: black;
+		color: black;
+	}
+	li.active a {
+		color: white !important;
+		background-color: black;
+	}
+	.active {
+		border-bottom: 0 !important;
+		margin-bottom: 2% !important;
+	}
+	ul li {
+		margin-top: 1%;
+		/*margin-bottom: 2%;*/
+	}
+	ul li a {
+		text-align: center;
+	}
+	.details {
+		margin-left: 2%;
+	}
+	div.glyphs {
+		position: inherit;
+	}
+	.details br {
+		display: none;
+	}
+}
 body {
 	font-family: 'Roboto', sans-serif;
 	color: black;
@@ -33,6 +83,9 @@ body {
 .navbar-brand:hover {
 	background: black;
 	color: white;
+}
+.navbar-nav {
+	margin: 0px -15px;
 }
 .list-hover-slide>li {
     position: relative;
@@ -73,6 +126,7 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 0;
+	padding-right: 0;
 }
 .resume {
 	position: relative;
@@ -89,6 +143,9 @@ h2 {
 	box-shadow: 0 0 10px rgba(0,0,0,.5);
 	margin-left: auto;
 	margin-right: auto;
+}
+.caption {
+	margin-top: 0;
 }
 /*h3 {
 	font-weight: 475;
@@ -163,17 +220,25 @@ h2 {
 .fa-linkedin:hover {
 	color: grey;
 }
-
+.icon, .icon:hover, .icon:active, .icon::after, .icon:visited, .icon:focus {
+	text-decoration: none;
+}
 .glyphicon-globe {
 	color: black;
 }
-.fa-linkedin-square, .fa-github-square {
+.fa {
+	transition: all .2s ease;
+}
+.fa-linkedin-square, .fa-github-square, .fa-download {
 	color: black;
 	font-size: .55em !important;
 	bottom: 1px;
+	/*padding-left: 2px;*/
+	text-decoration: none;
 }
-.fa-linkedin-square:hover, .fa-github-square:hover {
-	color: rgb(0, 119, 181);;
+.fa-linkedin-square:hover, .fa-github-square:hover, .fa-download:hover {
+	color: rgb(0, 119, 181);
+	text-decoration: none;
 }
 /*.upcoming {
 	background-color: white;
